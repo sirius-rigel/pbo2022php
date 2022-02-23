@@ -8,7 +8,7 @@ class buku {
     public function pinjam()
     {
         $pinjam = date("d-m-Y");
-        $tanggal_kembali = mktime(0,0,0,date("n"),date("j")+7,date("Y"));
+        $tanggal_kembali = mktime(0,0,0,date("n"),date("j")+6,date("Y"));
         $kembali = date("d-m-Y", $tanggal_kembali);
         return $kembali;
     }
@@ -92,7 +92,7 @@ $member_rigel->setNama_lengkap("Sirius Rigel");
 $member_rigel->setNo_hp("081253761004");
 
 echo "INFORMASI PEMINJAMAN";
-echo "Judul : ". $keterangan_buku->getjudul()."<br>";
+echo "Judul Buku: ". $keterangan_buku->getjudul()."<br>";
 echo "Penulis : ". $keterangan_buku->getPenulis()."<br>";
 echo "ISBN : ". $keterangan_buku->getIsbn()."<br>";
 echo "Nama Peminjam :". $member_rigel->getNama_lengkap()."<br>";
