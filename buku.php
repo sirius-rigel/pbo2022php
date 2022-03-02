@@ -1,9 +1,16 @@
 <?php
 
 class buku {
-    public $penulis;
-    public $isbn;
-    public $judul;
+    private $penulis;
+    private $isbn;
+    private $judul;
+
+    public function __construct($penulis_baru,$isbn_baru,$judul_baru)
+    {
+        $this->penulis = $penulis_baru;
+        $this->isbn = $isbn_baru;
+        $this->judul = $judul_baru;
+    }
 
     public function pinjam()
     {
@@ -23,7 +30,7 @@ class buku {
         $this->isbn = $isi_isbn;
     }
 
-    public function setjudul($isi_judul)
+    public function setJudul($isi_judul)
     {
         $this->judul = $isi_judul;
     }
@@ -38,21 +45,15 @@ class buku {
         return $this->isbn;
     }
 
-    public function getjudul()
+    public function getJudul()
     {
         return $this->judul;
     }
 }
 
-$keterangan_buku = new buku();
-$keterangan_buku->setPenulis("Masashi Kishimoto");
-$keterangan_buku->setIsbn(9780606382137);
-$keterangan_buku->setjudul("Naruto");
-$pinjam_buku = $keterangan_buku->pinjam();
-
-echo "Informasi Buku"."\n";
-echo "Judul Buku: ". $keterangan_buku->getjudul()."\n";
-echo "Penulis : ". $keterangan_buku->getPenulis()."\n";
-echo "ISBN : ". $keterangan_buku->getIsbn()."\n";
-echo "Tanggal Pinjam : ".date("d-m-Y")."\n";
+$buku_baru = new buku("Sutejo",366488377377,"Buku Cerita Anak Kalimantan");
+echo $buku_baru->setJudul("Buku Cerita Rakyat Kalimantan Barat");
+echo "Judul Buku : ".$buku_baru->getJudul()."\n";
+echo "Nama Penulis : ".$buku_baru->getPenulis()."\n";
+echo "ISBN : ".$buku_baru->getIsbn();
 ?>

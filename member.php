@@ -1,8 +1,17 @@
 <?php
 class member {
-    public $no_member;
-    public $nama_lengkap;
-    public $no_hp;
+    const PRIA = 1;
+    const WANITA = 0;
+
+    private $no_member;
+    private $nama_lengkap;
+    private $no_hp;
+
+    public function __construct($nama_lengkap_baru,$no_hp_baru)
+    {
+        $this->nama_lengkap = $nama_lengkap_baru;
+        $this->no_hp = $no_hp_baru;
+    }
 
     public function setNo_member($isi_no_member)
     {
@@ -35,13 +44,9 @@ class member {
     }
 }
 
-$member_rigel = new member();
-$member_rigel->setNo_member(0012);
-$member_rigel->setNama_lengkap("Sirius Rigel");
-$member_rigel->setNo_hp("081253761004");
-
-echo "Informasi Member"."\n";
-echo "Nama Member :". $member_rigel->getNama_lengkap()."\n";
-echo "No Member :". $member_rigel->getNo_member()."\n";
-echo "No HP : ". $member_rigel->getNo_hp()."\n";
+$member_baru = new member("Dimas Anjar Pratama",6281253751004);
+echo $member_baru->setNama_lengkap("Meilia Susanti");
+echo "Nama Member : ".$member_baru->getNama_lengkap()."\n";
+echo "".$member_baru::WANITA."\n";
+echo "Nomor HP : ".$member_baru->getNo_hp()
 ?>
