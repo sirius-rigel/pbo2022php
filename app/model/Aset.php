@@ -1,8 +1,8 @@
 <?php
-namespace app\model;
-require_once 'core\Model.php';
+namespace App\Model;
+use Core\Model;
 
-class Aset extends \core\Model
+class Aset extends \Core\Model
 {
     protected $no_inventaris;
     protected $lokasi;

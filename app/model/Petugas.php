@@ -1,5 +1,5 @@
 <?php
-namespace app\model;
+namespace App\Model;
 use App\Model\User;
 
 class Petugas extends User

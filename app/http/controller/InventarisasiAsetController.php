@@ -1,5 +1,5 @@
 <?php
-namespace app\http\controller;
+namespace App\Http\Controller;
 
 class InventarisasiAsetController
 {

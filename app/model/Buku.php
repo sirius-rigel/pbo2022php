@@ -1,6 +1,6 @@
 <?php
-namespace app\model;
-require_once 'Aset.php';
+namespace App\Model;
+use App\Model\Aset;
 
 class Buku extends Aset
 {

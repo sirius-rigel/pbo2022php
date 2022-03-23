@@ -1,5 +1,5 @@
 <?php
-namespace app\console;
+namespace App\Console;
 
 class System
 {

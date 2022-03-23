@@ -1,6 +1,6 @@
 <?php
-namespace app\model;
-use app\model\User;
+namespace App\Model;
+use App\Model\User;
 
 class Anggota extends User
 {
