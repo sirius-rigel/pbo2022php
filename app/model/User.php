@@ -1,8 +1,8 @@
 <?php
 namespace app\model;
-require_once 'core\Model.php';
+use Core\Model;
 
-class User extends \core\Model
+class User extends \Core\Model
 {
     protected $id;
     protected $username;
